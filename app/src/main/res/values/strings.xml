@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CanHalalRes</string>
+    <string name="button_pi"> &#928;</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
