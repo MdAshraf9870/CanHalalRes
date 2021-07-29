@@ -18,18 +18,20 @@
             android:name=".Activity.Login"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:windowSoftInputMode="adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activity.ResetPassword" />
         <activity android:name=".Activity.OTPActivity" />
         <activity android:name=".Activity.ForgetPassword" />
         <activity android:name=".Activity.Registration" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Activity.Dashboard.Dashboard" />
+        <activity android:name=".Activity.Dashboard.Dashboard" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
