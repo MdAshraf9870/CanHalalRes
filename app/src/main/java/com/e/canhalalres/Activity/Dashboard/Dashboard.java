@@ -22,11 +22,9 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
         setContentView(R.layout.activity_dashboard);
         bottomNevigation = findViewById(R.id.bottomNevigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.dashboard_frame, new HomeFragment()).commit();
-
         bottomNevigation.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.homeN:

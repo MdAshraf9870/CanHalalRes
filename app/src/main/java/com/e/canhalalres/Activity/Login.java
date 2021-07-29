@@ -72,6 +72,8 @@ public class Login extends AppCompatActivity {
         linear_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Login.this, Dashboard.class);
+                startActivity(intent);
                /* if (validation()){
 //                    getLogin();
                 }*/
