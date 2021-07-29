@@ -46,7 +46,7 @@
                 android:drawableLeft="@drawable/ic_user_avatar" />-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
                     android:background="@drawable/btn_bg"
@@ -70,15 +70,17 @@
                         android:background="@drawable/btn_bg"
                         android:layout_gravity="center"
                         android:hint="Full Name"
+                        android:textColor="@color/Red"
+                        android:textColorHint="@color/grey"
                         android:inputType="text"
                         android:maxLength="50"
                         android:maxLines="1"
                         android:padding="10dp"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="30dp"
@@ -103,10 +105,12 @@
                         android:layout_gravity="center"
                         android:hint="Enter Email"
                         android:inputType="text"
+                        android:textColor="@color/Red"
+                        android:textColorHint="@color/grey"
                         android:maxLength="50"
                         android:maxLines="1"
                         android:padding="10dp"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -118,7 +122,7 @@
                     >
                     <LinearLayout
                         android:layout_width="100dp"
-                        android:layout_height="50dp"
+                        android:layout_height="62dp"
                         android:background="@drawable/btn_bg"
                         android:orientation="horizontal">
 
@@ -139,11 +143,11 @@
                             android:gravity="center"
                             android:layout_marginStart="10dp"
                             android:textColor="@color/grey"
-                            android:textSize="16dp"/>
+                            android:textSize="14dp"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="62dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="30dp"
                         android:background="@drawable/btn_bg"
@@ -160,14 +164,15 @@
                             android:hint="Mobile"
                             android:inputType="number"
                             android:maxLength="50"
+                            android:textColorHint="@color/grey"
                             android:maxLines="1"
                             android:padding="10dp"
-                            android:textSize="12dp" />
+                            android:textSize="14dp" />
                     </LinearLayout>
                 </LinearLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="30dp"
@@ -188,21 +193,22 @@
 
 
                     <EditText
-                        android:layout_marginEnd="5dp"
-                        android:layout_centerVertical="true"
                         android:id="@+id/editPassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="10dp"
                         android:layout_toStartOf="@+id/passwordHide"
                         android:layout_toEndOf="@+id/iconPassword"
                         android:background="@drawable/btn_bg"
                         android:hint="Enter Password"
-                        android:inputType="text"
+                        android:textColorHint="@color/grey"
+                        android:inputType="textPassword"
                         android:maxLength="10"
                         android:maxLines="1"
                         android:padding="10dp"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
 
                     <ImageView
                         android:layout_marginEnd="5dp"
@@ -212,7 +218,7 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibility"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         app:tint="@color/black" />
 
                     <ImageView
@@ -223,7 +229,7 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibile"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         app:tint="@color/black"/>
 
 
@@ -232,7 +238,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="30dp"
@@ -263,11 +269,12 @@
                         android:layout_toEndOf="@+id/iconPassword1"
                         android:background="@drawable/btn_bg"
                         android:hint="Enter Password"
-                        android:inputType="text"
+                        android:inputType="textPassword"
                         android:maxLength="10"
+                        android:textColorHint="@color/grey"
                         android:maxLines="1"
                         android:padding="10dp"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
 
                     <ImageView
                         android:layout_marginEnd="5dp"
@@ -277,7 +284,7 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibility"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         app:tint="@color/black" />
 
                     <ImageView
@@ -288,9 +295,8 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibile"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         app:tint="@color/black"/>
-
 
                 </RelativeLayout>
 
@@ -316,7 +322,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Terms  Conditions"
+                        android:text="Terms &amp; Conditions"
                         android:textSize="16dp"
                         android:layout_marginStart="5dp"
                         android:textStyle="bold"
@@ -329,7 +335,8 @@
                     android:onClick="goDesbord"
                     android:id="@+id/linear_create"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
+                    android:layout_below="@+id/linearlayout"
                     android:layout_gravity="center"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
@@ -342,7 +349,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sign Up"
                         android:textColor="#fff"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -394,12 +401,12 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="150dp"
-                    android:layout_height="2dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="20dp"
-                    android:background="@color/grey"/>
+                <!--      <View
+                          android:layout_width="150dp"
+                          android:layout_height="2dp"
+                          android:layout_gravity="center"
+                          android:layout_marginBottom="20dp"
+                          android:background="@color/grey"/>-->
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

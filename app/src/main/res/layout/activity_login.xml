@@ -56,7 +56,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
                     android:background="@drawable/btn_bg"
@@ -79,16 +79,17 @@
                         android:background="@drawable/btn_bg"
                         android:layout_gravity="center"
                         android:hint="Enter Email"
+                        android:textColorHint="@color/grey"
                         android:inputType="text"
                         android:maxLength="50"
                         android:maxLines="1"
                         android:padding="10dp"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="30dp"
@@ -119,11 +120,12 @@
                         android:layout_toEndOf="@+id/iconPassword"
                         android:background="@drawable/btn_bg"
                         android:hint="Enter Password"
-                        android:inputType="text"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/grey"
                         android:maxLength="10"
                         android:maxLines="1"
                         android:padding="10dp"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
 
                     <ImageView
                         android:layout_marginEnd="5dp"
@@ -133,7 +135,7 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibility"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         app:tint="@color/black" />
 
                     <ImageView
@@ -144,7 +146,7 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibile"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         app:tint="@color/black"/>
 
 
@@ -177,7 +179,7 @@
                     android:onClick="goDashbord"
                     android:id="@+id/linear_login"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="62dp"
                     android:layout_below="@+id/linearlayout"
                     android:layout_gravity="center"
                     android:layout_marginStart="30dp"
@@ -253,12 +255,12 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="150dp"
-                    android:layout_height="2dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="20dp"
-                    android:background="@color/grey"/>
+                <!--     <View
+                         android:layout_width="150dp"
+                         android:layout_height="2dp"
+                         android:layout_gravity="center"
+                         android:layout_marginBottom="20dp"
+                         android:background="@color/grey"/>-->
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
