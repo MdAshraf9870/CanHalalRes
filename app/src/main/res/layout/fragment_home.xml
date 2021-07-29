@@ -23,6 +23,7 @@
             app:tabBackground="@null"
             app:tabSelectedTextColor="@color/Red"
             app:tabTextColor="@color/grey"
+            app:tabIndicatorFullWidth="false"
             app:tabIndicatorColor="@color/Red"
             app:tabMode="fixed"
             app:tabTextAppearance="@style/TabLayout.TabText">
@@ -31,13 +32,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_delivery_man"
-                android:text="Delivery" />
+                android:text="DELIVERY" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_relaxing_walk"
-                android:text="Pickup" />
+                android:text="PICKUP" />
 
 
         </com.google.android.material.tabs.TabLayout>

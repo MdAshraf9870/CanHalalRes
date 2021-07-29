@@ -39,10 +39,9 @@ public class CategoriesAdeptor extends RecyclerView.Adapter<CategoriesAdeptor.My
     @Override
     public void onBindViewHolder(@NonNull MyviewHolder holder, int position) {
 
-        Glide.with(holder.item_img.getContext()).load(""+allCategorys[position].getCatImgName())
+        Glide.with(holder.item_img.getContext()).load("http://ccepmt.com"+allCategorys[position].getImgUrl())
                 .into(holder.item_img);
         String name=allCategorys[position].getName();
-        Toast.makeText(holder.prices.getContext(), ""+name, Toast.LENGTH_SHORT).show();
         holder.prices.setText(name);
     }
 
