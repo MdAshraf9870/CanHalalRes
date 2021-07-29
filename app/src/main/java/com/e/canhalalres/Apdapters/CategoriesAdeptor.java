@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,9 +38,12 @@ public class CategoriesAdeptor extends RecyclerView.Adapter<CategoriesAdeptor.My
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyviewHolder holder, int position) {
-        holder.prices.setText(allCategorys[position].getName());
+
         Glide.with(holder.item_img.getContext()).load(""+allCategorys[position].getCatImgName())
                 .into(holder.item_img);
+        String name=allCategorys[position].getName();
+        Toast.makeText(holder.prices.getContext(), ""+name, Toast.LENGTH_SHORT).show();
+        holder.prices.setText(name);
     }
 
     @Override
@@ -53,7 +57,7 @@ public class CategoriesAdeptor extends RecyclerView.Adapter<CategoriesAdeptor.My
 
         public MyviewHolder(@NonNull View itemView) {
             super(itemView);
-            prices = itemView.findViewById(R.id.price);
+            prices = itemView.findViewById(R.id.price2);
             item_img = itemView.findViewById(R.id.item_img);
 
         }

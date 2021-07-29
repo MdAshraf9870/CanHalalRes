@@ -30,6 +30,7 @@ import com.e.canhalalres.R;
 import com.e.canhalalres.Url.Url;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -76,13 +77,20 @@ public class DeliveryPageFragment extends Fragment {
             StringRequest request = new StringRequest(Request.Method.GET, Url.Category_GetAll,
                     response -> {
                         if (response != null) {
+                            try {
 
-                            GsonBuilder gsonBuilder = new GsonBuilder();
-                            Gson gson = gsonBuilder.create();
-                            AllCategorys[] allCategorys = gson.fromJson(response, AllCategorys[].class);
-                            categories_rv.setAdapter(new CategoriesAdeptor(allCategorys));
-                            restaurants_nearby_rv.setAdapter(new RestaurantsAdaptor(allCategorys));
-                            swipeRefreshLayout.setRefreshing(false);
+                                JSONObject jsonObject=new JSONObject(response);
+
+                                GsonBuilder gsonBuilder = new GsonBuilder();
+                                Gson gson = gsonBuilder.create();
+                                AllCategorys[] allCategorys = gson.fromJson(jsonObject.getString("data"), AllCategorys[].class);
+                                categories_rv.setAdapter(new CategoriesAdeptor(allCategorys));
+//                                restaurants_nearby_rv.setAdapter(new RestaurantsAdaptor(allCategorys));
+                                swipeRefreshLayout.setRefreshing(false);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
                         }
 
                     }, (VolleyError volleyError) -> {

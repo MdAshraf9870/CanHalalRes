@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +37,8 @@ public class RestaurantsAdaptor  extends RecyclerView.Adapter<RestaurantsAdaptor
     @Override
     public void onBindViewHolder(@NonNull RestaurantsAdaptor.MyviewHolder holder, int position) {
         holder.prices.setText(allCategorys[position].getName());
+        String name=allCategorys[position].getName();
+        Toast.makeText(holder.prices.getContext(), ""+name, Toast.LENGTH_SHORT).show();
     }
 
     @Override
