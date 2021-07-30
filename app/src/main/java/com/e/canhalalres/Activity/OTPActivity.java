@@ -77,13 +77,13 @@ public class OTPActivity extends AppCompatActivity {
 
             }
         });
-//        linear_submit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(OTPActivity.this, RestaurantDetail.class);
-//                startActivity(intent);
-//            }
-//        });
+        linear_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OTPActivity.this, RestaurantDetail.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void findView() {
