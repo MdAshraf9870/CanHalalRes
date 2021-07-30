@@ -56,16 +56,16 @@ public class Login extends AppCompatActivity {
         passwordShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                passwordHide.setVisibility(View.GONE);
-                passwordShow.setVisibility(View.VISIBLE);
+                passwordHide.setVisibility(View.VISIBLE);
+                passwordShow.setVisibility(View.GONE);
                 editPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             }
         });
         passwordHide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                passwordShow.setVisibility(View.GONE);
-                passwordHide.setVisibility(View.VISIBLE);
+                passwordShow.setVisibility(View.VISIBLE);
+                passwordHide.setVisibility(View.GONE);
                 editPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
             }
         });

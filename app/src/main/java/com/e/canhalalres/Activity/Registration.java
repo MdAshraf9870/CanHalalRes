@@ -41,32 +41,32 @@ public class Registration extends AppCompatActivity {
         passwordShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                passwordHide.setVisibility(View.GONE);
-                passwordShow.setVisibility(View.VISIBLE);
+                passwordHide.setVisibility(View.VISIBLE);
+                passwordShow.setVisibility(View.GONE);
                 editPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             }
         });
         passwordHide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                passwordShow.setVisibility(View.GONE);
-                passwordHide.setVisibility(View.VISIBLE);
+                passwordShow.setVisibility(View.VISIBLE);
+                passwordHide.setVisibility(View.GONE);
                 editPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
             }
         });
         confirmpassswordshow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                confirmpassswordhide.setVisibility(View.GONE);
-                confirmpassswordshow.setVisibility(View.VISIBLE);
+                confirmpassswordhide.setVisibility(View.VISIBLE);
+                confirmpassswordshow.setVisibility(View.GONE);
                 editConfirmPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             }
         });
         confirmpassswordhide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                confirmpassswordshow.setVisibility(View.GONE);
-                confirmpassswordhide.setVisibility(View.VISIBLE);
+                confirmpassswordshow.setVisibility(View.VISIBLE);
+                confirmpassswordhide.setVisibility(View.GONE);
                 editConfirmPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
             }
         });
