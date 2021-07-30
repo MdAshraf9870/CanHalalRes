@@ -53,7 +53,7 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        passwordHide.setOnClickListener(new View.OnClickListener() {
+        passwordShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 passwordHide.setVisibility(View.GONE);
@@ -61,7 +61,7 @@ public class Login extends AppCompatActivity {
                 editPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             }
         });
-        passwordShow.setOnClickListener(new View.OnClickListener() {
+        passwordHide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 passwordShow.setVisibility(View.GONE);

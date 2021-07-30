@@ -34,10 +34,10 @@ public class Dashboard extends AppCompatActivity {
 //                    temp = new CouressPageFragment();
                     break;
                 case R.id.accountN:
-//                    temp = new AccountFragment();
+                    temp = new MyCartFragment();
                     break;
                 case R.id.faq:
-//                    temp = new FaqChooseTypeFragment();
+                    temp = new ProfileFragment();
 
             }
             try {

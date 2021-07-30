@@ -135,7 +135,7 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibility"
-                        android:visibility="gone"
+                        android:visibility="visible"
                         app:tint="@color/black" />
 
                     <ImageView
@@ -146,7 +146,7 @@
                         android:layout_width="20dp"
                         android:layout_height="26dp"
                         android:src="@drawable/visibile"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         app:tint="@color/black"/>
 
 

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CanHalalRes"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.RestaurantDetail.RestaurantDetail">
+        <activity android:name=".Activity.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,7 @@
         <activity android:name=".Activity.TrackOrder" />
         <activity android:name=".Activity.AddToCart" />
         <activity
-            android:name=".Activity.Login"
+            android:name=".Activity.RestaurantDetail.RestaurantDetail"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:windowSoftInputMode="adjustPan">

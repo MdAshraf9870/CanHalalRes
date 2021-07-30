@@ -38,7 +38,7 @@ public class Registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         findView();
-        passwordHide.setOnClickListener(new View.OnClickListener() {
+        passwordShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 passwordHide.setVisibility(View.GONE);
@@ -46,7 +46,7 @@ public class Registration extends AppCompatActivity {
                 editPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             }
         });
-        passwordShow.setOnClickListener(new View.OnClickListener() {
+        passwordHide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 passwordShow.setVisibility(View.GONE);
@@ -54,7 +54,7 @@ public class Registration extends AppCompatActivity {
                 editPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
             }
         });
-        confirmpassswordhide.setOnClickListener(new View.OnClickListener() {
+        confirmpassswordshow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 confirmpassswordhide.setVisibility(View.GONE);
@@ -62,7 +62,7 @@ public class Registration extends AppCompatActivity {
                 editConfirmPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             }
         });
-        confirmpassswordshow.setOnClickListener(new View.OnClickListener() {
+        confirmpassswordhide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 confirmpassswordshow.setVisibility(View.GONE);
@@ -80,12 +80,12 @@ public class Registration extends AppCompatActivity {
         linear_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CreateAccount();
-//                if(validation()){
-//                    CreateAccount();
-//                }else {
-//                    Toast.makeText(Registration.this, "Failed", Toast.LENGTH_SHORT).show();
-//                }
+
+                if(validation()){
+                    getCreateUser();
+                }else {
+                    Toast.makeText(Registration.this, "Failed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -93,14 +93,10 @@ public class Registration extends AppCompatActivity {
 
     private void getCreateUser() {
         HashMap<String,String> hashMap = new HashMap<>();
-//        hashMap.put("Username",editFullName.getText().toString().trim());
-//        hashMap.put("Email",editEmail.getText().toString().trim());
-//        hashMap.put("Mobile",editMobile.getText().toString().trim());
-//        hashMap.put("Password",editPassword.getText().toString().trim());
-        hashMap.put("Username","TestUsersss");
-        hashMap.put("Email","nazilnawaz6@gmail.com");
-        hashMap.put("Mobile","827397255");
-        hashMap.put("Password","test1234");
+        hashMap.put("Username",editFullName.getText().toString().trim());
+        hashMap.put("Email",editEmail.getText().toString().trim());
+        hashMap.put("Mobile",editMobile.getText().toString().trim());
+        hashMap.put("Password",editPassword.getText().toString().trim());
         CustomVolley.getInstance().postVolley(Registration.this, "http://ccepmt.com/api/User/register", hashMap, TAG, new CustomVolley.IRequestCallbacks() {
             @Override
             public void onStringResponse(String response) {
