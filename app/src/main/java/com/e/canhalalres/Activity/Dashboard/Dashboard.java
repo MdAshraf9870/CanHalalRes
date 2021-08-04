@@ -1,5 +1,6 @@
 package com.e.canhalalres.Activity.Dashboard;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
@@ -18,6 +19,7 @@ public class Dashboard extends AppCompatActivity {
     private BottomNavigationView bottomNevigation;
     private Fragment temp = null;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +36,10 @@ public class Dashboard extends AppCompatActivity {
 //                    temp = new CouressPageFragment();
                     break;
                 case R.id.accountN:
-                    temp = new MyCartFragment();
+                    temp = new ProfileFragment();
                     break;
                 case R.id.faq:
-                    temp = new ProfileFragment();
+                    temp = new MyCartFragment();
 
             }
             try {
