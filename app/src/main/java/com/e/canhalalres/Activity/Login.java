@@ -72,11 +72,11 @@ public class Login extends AppCompatActivity {
         linear_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, Dashboard.class);
-                startActivity(intent);
-               /* if (validation()){
-//                    getLogin();
-                }*/
+//                Intent intent = new Intent(Login.this, Dashboard.class);
+//                startActivity(intent);
+                if (validation()){
+                          getLogin();
+                }
             }
         });
     }
@@ -85,24 +85,23 @@ public class Login extends AppCompatActivity {
         HashMap<String,String> hashMap = new HashMap<>();
         hashMap.put("Email",editEmail.getText().toString().trim());
         hashMap.put("Password",editPassword.getText().toString().trim());
-       /* if (pd != null) {
+       if (pd != null) {
             pd.show();
-        }*/
+        }
         CustomVolley.getInstance().postVolley(Login.this, Url.login, hashMap, TAG, new CustomVolley.IRequestCallbacks() {
             @Override
             public void onStringResponse(String response) {
                 if (response!=null && !response.isEmpty()){
-                    /*if (pd != null && pd.isShowing()) {
-                        pd.dismiss();*/
+                    if (pd != null && pd.isShowing()) {
+                        pd.dismiss();
                         Intent intent = new Intent(Login.this, Dashboard.class);
                         startActivity(intent);
-//                    }
-
-
-
-
+                        finish();
+                        Toast.makeText(Login.this, "Login", Toast.LENGTH_SHORT).show();
+                   }
 
                 }else{
+                    pd.dismiss();
                     Toast.makeText(Login.this, "response is empty", Toast.LENGTH_SHORT).show();
                 }
 
@@ -110,7 +109,8 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-
+                pd.dismiss();
+                Toast.makeText(Login.this, volleyError.toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -112,11 +112,11 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_marginTop="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
                     android:gravity="center">
 
                     <TextView
@@ -142,6 +142,7 @@
 
 
                 <LinearLayout
+                    android:paddingTop="14dp"
                     android:id="@+id/linear_submit"
                     android:layout_width="match_parent"
                     android:layout_height="62dp"

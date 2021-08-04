@@ -10,18 +10,17 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.e.canhalalres.Models.AllCategorys;
+import com.e.canhalalres.Models.ModelGetRestaurantsNearby;
+import com.e.canhalalres.Models.modelGetCategories;
 import com.e.canhalalres.R;
-
-import java.util.ArrayList;
 
 public class RestaurantsAdaptor  extends RecyclerView.Adapter<RestaurantsAdaptor.MyviewHolder> {
 
 
-    AllCategorys[] allCategorys;
+    ModelGetRestaurantsNearby[] modelGetRestaurantsNearbies;
 
-    public RestaurantsAdaptor(AllCategorys[] allCategorys) {
-        this.allCategorys=allCategorys;
+    public RestaurantsAdaptor(ModelGetRestaurantsNearby[] modelGetRestaurantsNearbies) {
+        this.modelGetRestaurantsNearbies = modelGetRestaurantsNearbies;
     }
 
 
@@ -36,14 +35,14 @@ public class RestaurantsAdaptor  extends RecyclerView.Adapter<RestaurantsAdaptor
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull RestaurantsAdaptor.MyviewHolder holder, int position) {
-        holder.prices.setText(allCategorys[position].getName());
-        String name=allCategorys[position].getName();
+        holder.prices.setText(modelGetRestaurantsNearbies[position].getName());
+        String name= modelGetRestaurantsNearbies[position].getName();
         Toast.makeText(holder.prices.getContext(), ""+name, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public int getItemCount() {
-        return allCategorys.length;
+        return modelGetRestaurantsNearbies.length;
     }
 
     public static class MyviewHolder extends RecyclerView.ViewHolder {

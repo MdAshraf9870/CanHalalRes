@@ -2,14 +2,14 @@ package com.e.canhalalres.Models;
 
 import android.content.Intent;
 
-//public class AllCategorys {
+//public class modelGetCategories {
 //    int id;
 //    String name,type,catImg,imgUrl,status,createdDate,updatedDate,createdBy,isDeleted,catImgName;
 //
-//    public AllCategorys() {
+//    public modelGetCategories() {
 //    }
 //
-//    public AllCategorys(int id, String name, String type, String catImg, String imgUrl, String status, String createdDate, String updatedDate, String createdBy, String isDeleted, String catImgName) {
+//    public modelGetCategories(int id, String name, String type, String catImg, String imgUrl, String status, String createdDate, String updatedDate, String createdBy, String isDeleted, String catImgName) {
 //        this.id = id;
 //        this.name = name;
 //        this.type = type;
@@ -118,7 +118,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class AllCategorys {
+public class modelGetCategories {
 
     @SerializedName("id")
     @Expose
@@ -154,7 +154,7 @@ public class AllCategorys {
     @Expose
     private String catImgName;
 
-    public AllCategorys(Object id, String name, String type, Object catImg, String imgUrl, String status, Object createdDate, Object updatedDate, Object createdBy, Object isDeleted, String catImgName) {
+    public modelGetCategories(Object id, String name, String type, Object catImg, String imgUrl, String status, Object createdDate, Object updatedDate, Object createdBy, Object isDeleted, String catImgName) {
         this.id = id;
         this.name = name;
         this.type = type;

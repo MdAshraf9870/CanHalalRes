@@ -12,31 +12,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CanHalalRes"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.Dashboard.SeeAllCategoriesActivity"></activity>
+        <activity android:name=".Activity.OrderConfirmationActivity" />
         <activity android:name=".Activity.Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activity.TrackOrder" />
         <activity android:name=".Activity.AddToCart" />
         <activity
             android:name=".Activity.RestaurantDetail.RestaurantDetail"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
-        <activity android:name=".Activity.ResetPassword"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.ResetPassword"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".Activity.OTPActivity" />
         <activity android:name=".Activity.ForgetPassword" />
         <activity android:name=".Activity.Registration" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Activity.Dashboard.Dashboard"></activity>
+        <activity android:name=".Activity.Dashboard.Dashboard" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

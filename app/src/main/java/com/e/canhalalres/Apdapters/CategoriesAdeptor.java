@@ -6,23 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.e.canhalalres.Models.AllCategorys;
+import com.e.canhalalres.Models.modelGetCategories;
 import com.e.canhalalres.R;
-
-import java.util.ArrayList;
 
 public class CategoriesAdeptor extends RecyclerView.Adapter<CategoriesAdeptor.MyviewHolder> {
 
-    AllCategorys[] allCategorys;
+    modelGetCategories[] allCategories;
 
-    public CategoriesAdeptor(AllCategorys[] allCategorys) {
-        this.allCategorys=allCategorys;
+    public CategoriesAdeptor(modelGetCategories[] allCategories) {
+        this.allCategories = allCategories;
     }
 
 
@@ -39,15 +36,15 @@ public class CategoriesAdeptor extends RecyclerView.Adapter<CategoriesAdeptor.My
     @Override
     public void onBindViewHolder(@NonNull MyviewHolder holder, int position) {
 
-        Glide.with(holder.item_img.getContext()).load("http://ccepmt.com"+allCategorys[position].getImgUrl())
+        Glide.with(holder.item_img.getContext()).load("http://ccepmt.com"+ allCategories[position].getImgUrl())
                 .into(holder.item_img);
-        String name=allCategorys[position].getName();
+        String name= allCategories[position].getName();
         holder.prices.setText(name);
     }
 
     @Override
     public int getItemCount() {
-        return allCategorys.length;
+        return allCategories.length;
     }
 
     public static class MyviewHolder extends RecyclerView.ViewHolder {
