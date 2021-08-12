@@ -158,49 +158,66 @@
         </RelativeLayout>
 
 
-        <com.google.android.material.tabs.TabLayout
-            app:tabGravity="center"
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            app:tabGravity="center"-->
+<!--            android:layout_below="@+id/layout1"-->
+<!--            android:id="@+id/tabLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10sp"-->
+<!--            android:background="@color/white"-->
+<!--            app:tabBackground="@null"-->
+<!--            app:tabIndicatorColor="@color/Red"-->
+<!--            app:tabIndicatorFullWidth="false"-->
+<!--            app:tabMode="scrollable"-->
+<!--            app:tabSelectedTextColor="@color/Red"-->
+<!--            app:tabTextAppearance="@style/TabLayout.TabText.Restaurant"-->
+<!--            app:tabTextColor="@color/grey">-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Sandwiches" />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Salad" />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Dessert" />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Lunch" />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Breakfast" />-->
+
+
+<!--        </com.google.android.material.tabs.TabLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingStart="14dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/categories_rvList"
             android:layout_below="@+id/layout1"
-            android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:background="@color/white"
-            app:tabBackground="@null"
-            app:tabIndicatorColor="@color/Red"
-            app:tabIndicatorFullWidth="false"
-            app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/Red"
-            app:tabTextAppearance="@style/TabLayout.TabText.Restaurant"
-            app:tabTextColor="@color/grey">
+            android:layout_height="50dp"
+            tools:ignore="RtlSymmetry" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sandwiches" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Salad" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dessert" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lunch" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Breakfast" />
+        <FrameLayout
+            android:layout_below="@+id/categories_rvList"
+            android:id="@+id/menuItemList_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
-        </com.google.android.material.tabs.TabLayout>
     </RelativeLayout>
 
 

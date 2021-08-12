@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -70,8 +71,8 @@ public class DeliveryPageFragment extends Fragment {
         imageList.add(new SlideModel("https://burgerking-image.s3.amazonaws.com/16176882881x1119x540jpg"));
         imageList.add(new SlideModel("https://content3.jdmagicbox.com/comp/bulandshahr/a1/9999p5732.5732.170609205358.b9a1/catalogue/agarwal-king-barger-fastfood-bulandshahr-fast-food-kcikv.jpg"));
         imageSlider.setImageList(imageList, true);
-       // categories_rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        categories_rv.setNestedScrollingEnabled(false);
+        categories_rv.setNestedScrollingEnabled(true);
+       categories_rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         Animation slideUp = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
         Animation slideDown = AnimationUtils.loadAnimation(getContext(), R.anim.slide_bown);
         getCategories();
@@ -87,15 +88,21 @@ public class DeliveryPageFragment extends Fragment {
                     params.width = ViewGroup.LayoutParams.MATCH_PARENT;
                     params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
                     RvLayout.setLayoutParams(params);
+                    categories_rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
+                    categories_rv.setNestedScrollingEnabled(false);
                   //  RvLayout.startAnimation(slideDown);
                     seeAll_lessAll=true;
                     showAllCatogiry.setText("See Less");
+
+
                 }else {
                     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) RvLayout.getLayoutParams();
                     params.width = ViewGroup.LayoutParams.MATCH_PARENT;
-                    params.height = 310;
+                    params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
                     RvLayout.setLayoutParams(params);
-                 //   RvLayout.startAnimation(slideUp);
+                    categories_rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+                    categories_rv.setNestedScrollingEnabled(true);
+                    //   RvLayout.startAnimation(slideUp);
                     showAllCatogiry.setText("See All");
                     seeAll_lessAll=false;
                 }
@@ -116,26 +123,7 @@ public class DeliveryPageFragment extends Fragment {
                                 GsonBuilder gsonBuilder = new GsonBuilder();
                                 Gson gson = gsonBuilder.create();
                                 ModelGetRestaurantsNearby[] modelGetRestaurantsNearbies = gson.fromJson(jsonObject.getString("data"), ModelGetRestaurantsNearby[].class);
-                                if (i<= modelGetRestaurantsNearbies.length){
-//                                    ModelGetRestaurantsNearby modelGetRestaurantsNearby =new ModelGetRestaurantsNearby(
-//                                            modelGetRestaurantsNearbies[i].getId(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getDeliveryCharges(),
-//                                            modelGetRestaurantsNearbies[i].getActive(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getActive(),
-//                                            modelGetRestaurantsNearbies[i].getActive(),
-//                                            modelGetRestaurantsNearbies[i].getName(),
-//                                            modelGetRestaurantsNearbies[i].getName());
-                                }
+
                                 restaurants_nearby_rv.setAdapter(new RestaurantsAdaptor(modelGetRestaurantsNearbies));
 
 

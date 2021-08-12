@@ -12,6 +12,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/restaurants_nearby_lsit"
         android:layout_width="300dp"
         android:layout_height="310dp"
         android:background="@drawable/bg_grey">

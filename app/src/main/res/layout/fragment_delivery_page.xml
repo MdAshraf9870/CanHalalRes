@@ -93,7 +93,7 @@
             <LinearLayout
                 android:id="@+id/RvLayout"
                 android:layout_width="match_parent"
-                android:layout_height="115dp"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -102,9 +102,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="3" />
+                    android:layout_marginTop="10dp"/>
             </LinearLayout>
 
         </LinearLayout>

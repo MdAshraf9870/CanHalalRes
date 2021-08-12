@@ -1,6 +1,7 @@
 package com.e.canhalalres.Activity.Dashboard;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import com.e.canhalalres.Activity.Dashboard.HomePage.HomeFragment;
+import com.e.canhalalres.Activity.Login;
+import com.e.canhalalres.Activity.RestaurantDetail.RestaurantDetail;
 import com.e.canhalalres.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -26,6 +29,7 @@ public class Dashboard extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_dashboard);
         bottomNevigation = findViewById(R.id.bottomNevigation);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.dashboard_frame, new HomeFragment()).commit();
         bottomNevigation.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
