@@ -11,14 +11,16 @@
     tools:ignore="RtlSymmetry">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:id="@+id/restaurants_nearby_lsit"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="310dp"
         android:background="@drawable/bg_grey">
 
 
         <RelativeLayout
+            android:orientation="vertical"
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -29,7 +31,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/imageCardHolder"
-                android:layout_width="300dp"
+                android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_centerHorizontal="true"
                 app:cardCornerRadius="20dp"
@@ -44,7 +46,9 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/new_suite" />
 
+
             </androidx.cardview.widget.CardView>
+
 
             <RelativeLayout
                 android:id="@+id/foodNameHolder"
@@ -75,6 +79,24 @@
 
             </RelativeLayout>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="40dp"
+                android:layout_alignBottom="@+id/foodNameHolder"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/logo" />
+
+            </androidx.cardview.widget.CardView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_bg"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:text="Snadwiches"
                     android:textColor="@color/Red" />
 
@@ -96,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:background="@drawable/text_bg"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:text="Salad"
                     android:textColor="@color/Red" />
 
@@ -105,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:background="@drawable/text_bg"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:text="Dessert"
                     android:textColor="@color/Red" />
 
@@ -115,7 +137,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:background="@drawable/text_bg"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:text="Lunch"
                     android:textColor="@color/Red" />
             </LinearLayout>
@@ -123,26 +145,10 @@
 
         </RelativeLayout>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginBottom="100dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
-            app:layout_constraintStart_toStartOf="@+id/relativeLayout">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="@drawable/logo" />
-
-        </androidx.cardview.widget.CardView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

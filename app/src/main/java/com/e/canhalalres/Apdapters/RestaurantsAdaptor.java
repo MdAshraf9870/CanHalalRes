@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,7 +64,7 @@ public class RestaurantsAdaptor  extends RecyclerView.Adapter<RestaurantsAdaptor
 
     public static class MyviewHolder extends RecyclerView.ViewHolder {
         TextView prices;
-        ConstraintLayout restaurants_nearby_lsit;
+        LinearLayout restaurants_nearby_lsit;
 
         public MyviewHolder(@NonNull View itemView) {
             super(itemView);
