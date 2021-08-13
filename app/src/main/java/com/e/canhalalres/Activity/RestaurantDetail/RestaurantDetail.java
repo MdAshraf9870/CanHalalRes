@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,26 +17,51 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.e.canhalalres.Apdapters.RestaurantsAdaptor;
+import com.e.canhalalres.Models.ModelGetRestaurantsNearby;
+import com.e.canhalalres.Models.RestaurantMenuListModel;
 import com.e.canhalalres.R;
+import com.e.canhalalres.Url.Url;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class RestaurantDetail extends AppCompatActivity {
     private RecyclerView categories_rvList;
 
-    //    public RestaurantDetail(int i) {
-    //    }
+    private String RestaurantIds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_detail);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window w = getWindow(); // in Activity's onCreate() for instance
-            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//            Window w = getWindow(); // in Activity's onCreate() for instance
+//            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
             categories_rvList = findViewById(R.id.categories_rvList);
             getSupportFragmentManager().beginTransaction().replace(R.id.menuItemList_frame,new ManuItemListFragment()).commit();
+            Intent intent =getIntent();
+            try {
+
+                if (intent.getStringExtra("idRestaurantDetail" )!= null) {
+                    getRestaurantData(intent.getStringExtra("idRestaurantDetail" ));
+                }
+            }catch (Exception e){
+
+            }
+
             ArrayList<String> arrayList =new ArrayList();
             arrayList.add("Sandwiches");
             arrayList.add("Sandwiches");
@@ -42,20 +70,50 @@ public class RestaurantDetail extends AppCompatActivity {
             arrayList.add("Sandwiches");
             arrayList.add("Sandwiches");
             arrayList.add("Sandwiches");
-            categories_rvList.setLayoutManager(new LinearLayoutManager(
-                    RestaurantDetail.this, LinearLayoutManager.HORIZONTAL, false));
-            categories_rvList.setAdapter(new CategoriesListApdaptor(arrayList));
+            categories_rvList.setLayoutManager(new LinearLayoutManager(RestaurantDetail.this, LinearLayoutManager.HORIZONTAL, false));
 
         }
 
     }
 
-    static class CategoriesListApdaptor extends RecyclerView.Adapter<CategoriesListApdaptor.MyViewholder> {
-        ArrayList<String> arrayList;
-        int row_index;
-        public CategoriesListApdaptor(ArrayList<String> arrayList) {
-            this.arrayList=arrayList;
+    private void getRestaurantData(String idRestaurantDetail) {
+        try {
+            StringRequest request = new StringRequest(Request.Method.GET, Url.Get_All_CatBy_RestId+idRestaurantDetail,
+                    response -> {
+                        if (response != null) {
+                            GsonBuilder gsonBuilder = new GsonBuilder();
+                            Gson gson = gsonBuilder.create();
+                            RestaurantMenuListModel[] restaurantMenuListModel = gson.fromJson(response, RestaurantMenuListModel[].class);
+                            categories_rvList.setAdapter(new CategoriesListApdaptor(restaurantMenuListModel,this));
+
+                        }
+
+                    }, (VolleyError volleyError) -> {
+                Toast.makeText(this, volleyError.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+
+            ) {
+
+            };
+            @SuppressLint("UseRequireInsteadOfGet")
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(request);
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+
         }
+    }
+    static class CategoriesListApdaptor extends RecyclerView.Adapter<CategoriesListApdaptor.MyViewholder> {
+        AppCompatActivity activity;
+        int row_index;
+        RestaurantMenuListModel[] restaurantMenuListModel;
+        Context context;
+        public CategoriesListApdaptor(RestaurantMenuListModel[] restaurantMenuListModel, Context context) {
+            this.restaurantMenuListModel=restaurantMenuListModel;
+            this.context=context;
+        }
+
 
         @NonNull
         @Override
@@ -66,7 +124,8 @@ public class RestaurantDetail extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull MyViewholder holder, int position) {
-        holder.listName.setText(arrayList.get(position));
+            activity=(AppCompatActivity)context;
+        holder.listName.setText(restaurantMenuListModel[position].getName());
 
             holder.listName.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -76,9 +135,10 @@ public class RestaurantDetail extends AppCompatActivity {
                 }
             });
             if(row_index ==position){
-
                 holder.listName.setTextColor(Color.parseColor("#db212b"));
                 holder.manuItemBottomLine.setVisibility(View.VISIBLE);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.menuItemList_frame,new ManuItemListFragment("1")).commit();
+
             }
             else
             {
@@ -89,7 +149,7 @@ public class RestaurantDetail extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return arrayList.size();
+            return restaurantMenuListModel.length;
         }
 
         public static class MyViewholder extends RecyclerView.ViewHolder {

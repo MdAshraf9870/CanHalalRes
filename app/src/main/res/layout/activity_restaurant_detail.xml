@@ -72,7 +72,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <RelativeLayout
-
             android:id="@+id/layout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -203,7 +202,7 @@
 <!--        </com.google.android.material.tabs.TabLayout>-->
 
         <androidx.recyclerview.widget.RecyclerView
-            android:paddingStart="14dp"
+            android:paddingStart="14.7dp"
             android:layout_marginTop="25dp"
             android:id="@+id/categories_rvList"
             android:layout_below="@+id/layout1"

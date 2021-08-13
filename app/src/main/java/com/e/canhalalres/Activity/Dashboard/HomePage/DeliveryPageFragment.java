@@ -161,7 +161,8 @@ public class DeliveryPageFragment extends Fragment {
                                 JSONObject jsonObject=new JSONObject(response);
                                 GsonBuilder gsonBuilder = new GsonBuilder();
                                 Gson gson = gsonBuilder.create();
-                                modelGetCategories[] allCategories = gson.fromJson(jsonObject.getString("data"), modelGetCategories[].class);
+                                modelGetCategories[] allCategories = gson.fromJson(jsonObject.getString("data"),
+                                        modelGetCategories[].class);
                                 categories_rv.setAdapter(new CategoriesAdeptor(allCategories));
 //                                restaurants_nearby_rv.setAdapter(new RestaurantsAdaptor(allCategories));
                             } catch (JSONException e) {
