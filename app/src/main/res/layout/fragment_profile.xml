@@ -122,6 +122,7 @@
                         android:background="@drawable/ic_group_751" />
 
                     <TextView
+                        android:id="@+id/txt_Myorders"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="22dp"
@@ -145,6 +146,7 @@
                         android:background="@drawable/ic_icon_material_location_on" />
 
                     <TextView
+                        android:id="@+id/txt_myAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="23dp"
