@@ -1,7 +1,7 @@
 package com.e.canhalalres.Models;
 
 public class ModelGetRestaurantsNearby {
-    private int id;
+    private int restId;
     private String name;
     private String email;
     private String userName;
@@ -22,8 +22,8 @@ public class ModelGetRestaurantsNearby {
     public ModelGetRestaurantsNearby() {
     }
 
-    public ModelGetRestaurantsNearby(int id, String name, String email, String userName, String countryCode, String mobile, String location, String logoImg, String bannerImg, Double deliveryCharges, Boolean isDelivery, String type, String status, Boolean isDeleted, Boolean isActive, String logo, String banner) {
-        this.id = id;
+    public ModelGetRestaurantsNearby(int restId, String name, String email, String userName, String countryCode, String mobile, String location, String logoImg, String bannerImg, Double deliveryCharges, Boolean isDelivery, String type, String status, Boolean isDeleted, Boolean isActive, String logo, String banner) {
+        this.restId = restId;
         this.name = name;
         this.email = email;
         this.userName = userName;
@@ -42,12 +42,12 @@ public class ModelGetRestaurantsNearby {
         this.banner = banner;
     }
 
-    public int getId() {
-        return id;
+    public int getRestId() {
+        return restId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRestId(int restId) {
+        this.restId = restId;
     }
 
     public String getName() {

@@ -15,8 +15,9 @@
         <activity android:name=".Activity.Dashboard.SeeAllCategoriesActivity"></activity>
         <activity android:name=".Activity.OrderConfirmationActivity" />
         <activity android:name=".Activity.Login">
-
         </activity>
+        <activity android:name=".Activity.MyCards"/>
+        <activity android:name=".Activity.MyAddress"/>
         <activity android:name=".Activity.TrackOrder" />
         <activity android:name=".Activity.AddToCart" />
         <activity

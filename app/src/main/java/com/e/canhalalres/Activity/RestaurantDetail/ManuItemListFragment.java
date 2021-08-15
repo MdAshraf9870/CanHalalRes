@@ -3,7 +3,6 @@ package com.e.canhalalres.Activity.RestaurantDetail;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,14 +22,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.e.canhalalres.Activity.AddToCart;
-import com.e.canhalalres.Apdapters.RestaurantsAdaptor;
-import com.e.canhalalres.Models.ModelGetRestaurantsNearby;
 import com.e.canhalalres.Models.RestaurantMenuListItemModel;
 import com.e.canhalalres.R;
 import com.e.canhalalres.Url.Url;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.internal.$Gson$Preconditions;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -133,7 +129,11 @@ public class ManuItemListFragment extends Fragment {
             holder.menuItemOrderView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    context.startActivity(new Intent(context, AddToCart.class));
+                    Intent intent=new Intent(context, AddToCart.class);
+                    intent.putExtra("id",restaurantMenuListItemModels[position].getId().toString());
+                    intent.putExtra("name",restaurantMenuListItemModels[position].getItemName().toString());
+                    intent.putExtra("price",restaurantMenuListItemModels[position].getPrice().toString());
+                    context.startActivity(intent);
                 }
             });
 

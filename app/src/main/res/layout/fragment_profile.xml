@@ -51,7 +51,8 @@
                         android:layout_height="26dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/ic_outline_settings_24" />
+                        android:background="@drawable/ic_outline_settings_24"
+                        android:visibility="gone" />
 
                 </RelativeLayout>
 
@@ -111,6 +112,7 @@
                 android:layout_marginTop="40dp">
 
                 <LinearLayout
+                    android:id="@+id/linear_myOrder"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -133,6 +135,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linear_myAddress"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -160,7 +163,8 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -183,7 +187,8 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -202,6 +207,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/my_card_payment"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -267,7 +273,7 @@
                         android:layout_marginStart="22dp"
 
                         android:fontFamily="sans-serif-medium"
-                        android:text="FAQ"
+                        android:text="Terms &amp; Condition"
                         android:textColor="@color/black"
                         android:textSize="17.3sp"
                         android:textStyle="normal" />

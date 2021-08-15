@@ -148,7 +148,7 @@ public class PickupPageFragment extends Fragment {
                         }
 
                     }, (VolleyError volleyError) -> {
-                Toast.makeText(getContext(), volleyError.toString(), Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(getContext(), volleyError.toString(), Toast.LENGTH_SHORT).show();
 
             }
 
@@ -185,7 +185,6 @@ public class PickupPageFragment extends Fragment {
                         }
 
                     }, (VolleyError volleyError) -> {
-                Toast.makeText(getContext(), volleyError.toString(), Toast.LENGTH_SHORT).show();
 
             }
 

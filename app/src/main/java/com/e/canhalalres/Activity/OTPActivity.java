@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import com.e.canhalalres.R;
 
 public class OTPActivity extends AppCompatActivity {
     EditText editOTP1,editOTP2,editOTP3,editOTP4;
-    LinearLayout linear_submit;
+    Button btn_submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +78,7 @@ public class OTPActivity extends AppCompatActivity {
 
             }
         });
-        linear_submit.setOnClickListener(new View.OnClickListener() {
+        btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(OTPActivity.this, RestaurantDetail.class);
@@ -91,6 +92,6 @@ public class OTPActivity extends AppCompatActivity {
         editOTP2 = (EditText) findViewById(R.id.editotp2);
         editOTP3 = (EditText) findViewById(R.id.editotp3);
         editOTP4 = (EditText) findViewById(R.id.editotp4);
-        linear_submit = (LinearLayout) findViewById(R.id.linear_submit);
+        btn_submit = (Button) findViewById(R.id.btn_submit);
     }
 }

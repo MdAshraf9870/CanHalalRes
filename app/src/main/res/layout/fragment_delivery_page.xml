@@ -28,7 +28,7 @@
                 android:background="@drawable/btn_bg"
                 android:drawableStart="@drawable/ic_baseline_search_24"
                 android:drawableEnd="@drawable/ic_group_616"
-                android:hint="   Search"
+                android:hint="Search"
                 android:paddingStart="21dp"
                 android:paddingEnd="5dp"
                 android:textColor="@color/black"

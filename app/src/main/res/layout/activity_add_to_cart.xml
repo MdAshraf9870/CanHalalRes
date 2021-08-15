@@ -18,10 +18,10 @@
             android:background="@drawable/sandwich">
 
             <androidx.cardview.widget.CardView
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="14.7dp"
                 android:layout_marginTop="34dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="100dp">
 
@@ -35,122 +35,131 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
+<LinearLayout
+    android:paddingStart="14.7dp"
+    android:paddingEnd="14.7dp"
+    android:layout_below="@+id/profile_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Club Sandwich"
+        android:textColor="#040707"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/item_minus"
+            android:layout_width="39dp"
+            android:layout_height="34dp"
+            android:background="@drawable/minus" />
 
         <TextView
-            android:id="@+id/user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_layout"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Club Sandwich"
-            android:textColor="#040707"
-            android:textSize="20dp"
-            android:textStyle="normal" />
+            android:id="@+id/item_countity"
+            android:layout_width="39dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_layout"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="right"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="39dp"
-                android:layout_height="34dp"
-                android:src="@drawable/minus" />
-
-            <TextView
-                android:layout_width="39dp"
-                android:layout_height="34dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <ImageView
-                android:layout_width="39dp"
-                android:layout_height="34dp"
-                android:src="@drawable/add" />
+        <ImageButton
+            android:id="@+id/item_plus"
+            android:layout_width="39dp"
+            android:layout_height="34dp"
+            android:background="@drawable/add" />
 
 
-        </LinearLayout>
+    </LinearLayout>
 
-        <TextView
+    <TextView
 
-            android:id="@+id/txtpiece"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/user_name"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="1 Piece"
-            android:textColor="@color/grey"
-            android:textSize="12dp"
-            android:textStyle="normal" />
+        android:id="@+id/txtpiece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="1 Piece"
+        android:textColor="@color/grey"
+        android:textSize="12dp"
+        android:textStyle="normal" />
 
-        <TextView
+    <TextView
 
-            android:id="@+id/txtdollor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtpiece"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="$50.00"
-            android:textColor="@color/Red"
-            android:textSize="20dp"
-            android:textStyle="normal" />
+        android:id="@+id/txtdollor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtpiece"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="$50.00"
+        android:textColor="@color/Red"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/txtread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtdollor"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Lorem ipsum dolor sit amet, consetetur sadipscing eli sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam. Read more"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        android:textStyle="normal" />
+
+
+    <LinearLayout
+        android:id="@+id/linearbox"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_below="@+id/txtread"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_grey"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtread"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtdollor"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Lorem ipsum dolor sit amet, consetetur sadipscing eli sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam. Read more"
-            android:textColor="@color/grey"
-            android:textSize="15dp"
-            android:textStyle="normal" />
+            android:layout_margin="10dp"
+            android:text="write here..."
+            android:textColor="@color/grey" />
 
+    </LinearLayout>
+</RelativeLayout>
 
-        <LinearLayout
-            android:id="@+id/linearbox"
-            android:layout_width="370dp"
-            android:layout_height="119dp"
-            android:layout_below="@+id/txtread"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_grey"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="write here..."
-                android:textColor="@color/grey" />
-
-        </LinearLayout>
+</LinearLayout>
 
         <RelativeLayout
+            android:paddingStart="14.7dp"
+            android:paddingEnd="14.7dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -168,8 +177,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="22dp"
                     android:layout_below="@+id/linearbox"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="Total Price"
@@ -178,12 +185,11 @@
                     android:textStyle="normal" />
 
                 <TextView
-
+                    android:id="@+id/total_prince"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txttotal"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="20dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="$250.00"
@@ -201,7 +207,6 @@
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_bg_login"
                 android:gravity="center">
@@ -209,10 +214,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Add to Cart"
-                    android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textSize="19sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:text="Add to Cart "/>
 
             </LinearLayout>
         </RelativeLayout>

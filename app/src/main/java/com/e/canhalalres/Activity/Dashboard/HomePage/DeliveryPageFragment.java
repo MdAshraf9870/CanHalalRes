@@ -134,7 +134,7 @@ public class DeliveryPageFragment extends Fragment {
                         }
 
                     }, (VolleyError volleyError) -> {
-                Toast.makeText(getContext(), volleyError.toString(), Toast.LENGTH_SHORT).show();
+       //         Toast.makeText(getContext(), volleyError.toString(), Toast.LENGTH_SHORT).show();
 
             }
 
@@ -172,7 +172,7 @@ public class DeliveryPageFragment extends Fragment {
                         }
 
                     }, (VolleyError volleyError) -> {
-                Toast.makeText(getContext(), volleyError.toString(), Toast.LENGTH_SHORT).show();
+          //      Toast.makeText(getContext(), volleyError.toString(), Toast.LENGTH_SHORT).show();
 
             }
 
