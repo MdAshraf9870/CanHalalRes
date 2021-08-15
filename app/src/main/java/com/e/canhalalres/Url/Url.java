@@ -9,5 +9,5 @@ public class Url {
     public static final String Restaurant_GetAll = Base + "Restaurant/GetAll";
     public static final String Get_All_CatBy_RestId = Base + "Category/GetAllCatByRestId?id=";
     public static final String Category_Get_Cat_By_Rest = Base + "Category/GetCatByRestId?id=";
-
+    public static final String Add_Cart = Base + "menu/AddToCart";
 }
