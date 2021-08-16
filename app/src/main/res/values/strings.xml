@@ -3,4 +3,6 @@
     <string name="button_pi"> &#928;</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="i_am_here"> i_am_here</string>
+    <string name="provider_failed"> provider_failed</string>
 </resources>
