@@ -10,4 +10,5 @@ public class Url {
     public static final String Get_All_CatBy_RestId = Base + "Category/GetAllCatByRestId?id=";
     public static final String Category_Get_Cat_By_Rest = Base + "Category/GetCatByRestId?id=";
     public static final String Add_Cart = Base + "menu/AddToCart";
+    public static final String my_Cart_view_oerder = Base + "Menu/ViewCart";
 }

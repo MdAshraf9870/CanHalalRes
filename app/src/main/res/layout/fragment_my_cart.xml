@@ -118,6 +118,7 @@
 
 
             <TextView
+                android:id="@+id/my_add_to_cart_total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -186,6 +187,7 @@
 
 
             <TextView
+                android:id="@+id/final_total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -199,7 +201,6 @@
 
         </RelativeLayout>
         <LinearLayout
-            android:onClick="goDesbord"
             android:id="@+id/linear_checkout"
             android:layout_width="match_parent"
             android:layout_height="58dp"

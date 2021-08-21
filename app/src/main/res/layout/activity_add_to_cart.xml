@@ -69,7 +69,7 @@
             android:id="@+id/item_minus"
             android:layout_width="39dp"
             android:layout_height="34dp"
-            android:background="@drawable/minus" />
+            android:background="@drawable/ic_minus_24" />
 
         <TextView
             android:id="@+id/item_quantity"
@@ -87,7 +87,7 @@
             android:id="@+id/item_plus"
             android:layout_width="39dp"
             android:layout_height="34dp"
-            android:background="@drawable/add" />
+            android:background="@drawable/ic_baseline_add_box_24" />
 
 
     </LinearLayout>

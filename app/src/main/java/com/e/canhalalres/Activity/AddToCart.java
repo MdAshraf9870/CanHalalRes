@@ -95,7 +95,7 @@ public class AddToCart extends AppCompatActivity {
 
     private void AddCartData() {
         HashMap<String,String> hashMap =  new HashMap<>();
-        hashMap.put("menuItemId", "2");
+        hashMap.put("menuItemId", id);
         hashMap.put("quantity","1");
         hashMap.put("price", "120");
         hashMap.put("userId", "1");
@@ -109,12 +109,14 @@ public class AddToCart extends AppCompatActivity {
                     if (response!=null && !response.isEmpty()){
                         if (pd!=null && pd.isShowing()){
                             pd.dismiss();
-                            Toast.makeText(AddToCart.this, "Your Order Successfully Saved into Cart", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AddToCart.this,
+                                    "Your Order Successfully Saved into Cart", Toast.LENGTH_LONG).show();
                         }
                     }else{
                         if (pd!=null && pd.isShowing()){
                             pd.dismiss();
-                            Toast.makeText(AddToCart.this, "Your Order Successfully Saved into Cart", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AddToCart.this,
+                                    "Your Order Successfully Saved into Cart", Toast.LENGTH_LONG).show();
                         }
                     }
                 }
